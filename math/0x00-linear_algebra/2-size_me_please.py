@@ -3,8 +3,9 @@ import numpy as np
 
 """ This module has a function that returns the shape of a matrix. """
 
+
 def matrix_shape(matrix):
-    arr = np.array(matrix)     
+    arr = np.array(matrix)
 #    shape = []
 #    shape.append(len(matrix))
 #    shape.append(len(matrix[0]))
