@@ -1,6 +1,6 @@
 # Linear Algebra
 ## Topics
-ahh   as
+ahh  
 - What is a vector?
 - What is a matrix?
 - What is a transpose?
