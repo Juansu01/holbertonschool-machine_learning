@@ -1,6 +1,6 @@
 # Linear Algebra
 ## Topics
---
+
 - What is a vector?
 - What is a matrix?
 - What is a transpose?
@@ -16,4 +16,3 @@
 - What is parallelization and why is it important?
 - What is broadcasting?
 
---
