@@ -5,6 +5,7 @@ import numpy as np
 
 
 def matrix_shape(matrix):
+    """ Returns the shape of a matrix. """
     arr = np.array(matrix)
 #    shape = []
 #    shape.append(len(matrix))
