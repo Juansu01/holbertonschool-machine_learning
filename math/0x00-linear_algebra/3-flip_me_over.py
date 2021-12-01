@@ -5,5 +5,6 @@ import numpy as np
 
 
 def matrix_transpose(matrix):
+    """ Returns a flipped matrix. """
     arr = np.array(matrix)
     return arr.transpose().tolist()
