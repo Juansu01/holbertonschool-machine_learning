@@ -4,7 +4,6 @@
 
 def matrix_shape(matrix):
     """ Returns the shape of a matrix. """
-
     shape = []
     shape.append(len(matrix))
     shape.append(len(matrix[0]))
