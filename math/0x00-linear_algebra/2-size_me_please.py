@@ -3,7 +3,7 @@
 
 
 def matrix_shape(matrix):
-    """ Returns the shape of a matrix. """
+    """ This function iterates over a given matrix and returns its shape """
     shape = []
     shape.append(len(matrix))
     shape.append(len(matrix[0]))
