@@ -5,8 +5,7 @@
 def matrix_shape(matrix):
     """ This function iterates over a given matrix and returns its shape """
     shape = []
-    shape.append(len(matrix))
-    shape.append(len(matrix[0]))
-    if len(matrix[0]) > 2:
-        shape.append(len(matrix[0][0]))
+    while type(matrix) == list:
+        shape.append(len(matrix))
+        matrix = matrix[0]
     return shape
