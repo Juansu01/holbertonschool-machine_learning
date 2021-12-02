@@ -4,6 +4,8 @@
 
 def mat_mul(mat1, mat2):
     """Returns the product of the two matrices"""
+    if len(mat1[0]) != len(mat2):
+        return None
     result = []
     for m in range(0, len(mat1)):
         rows = []
