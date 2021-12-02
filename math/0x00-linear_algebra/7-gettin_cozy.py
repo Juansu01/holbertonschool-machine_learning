@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-import numpy as np
-
 """ This module defines function that concatenates two matrices. """
 
 
