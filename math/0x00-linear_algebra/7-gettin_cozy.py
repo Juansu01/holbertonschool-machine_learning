@@ -8,10 +8,10 @@ def cat_matrices2D(mat1, mat2, axis=0):
         if len(mat1) != len(mat2):
             return None
         new_matrix = []
-        for i, e in enumerate(mat1[:]):
-            new_matrix.append(e.copy())
-        for i, e in enumerate(mat2[:]):
-            new_matrix[i].append(e.copy()[0])
+        for row1, row2 in zip(mat1, mat2):
+            copy = row1.copy()
+            copy.extend(row2.copy())
+            new_matrix.append(copy)
         return new_matrix
     if axis == 0:
         new_matrix = []
