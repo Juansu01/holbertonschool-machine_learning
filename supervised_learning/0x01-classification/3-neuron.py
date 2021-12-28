@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import numpy as np
 """ This module defines the Neuron class, that
 defines a single neuron that performs binary classification.
 """
+import numpy as np
 
 
 class Neuron():
