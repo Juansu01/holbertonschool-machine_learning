@@ -2,7 +2,7 @@
 """ This module defines the Neuron class, that
 defines a single neuron that performs binary classification.
 """
-from typing import Type
+
 import numpy as np
 
 
