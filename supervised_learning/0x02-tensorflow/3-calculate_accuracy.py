@@ -7,9 +7,7 @@ import tensorflow.compat.v1 as tf
 
 def calculate_accuracy(y, y_pred):
     """Calculates accuracy"""
-    m = tf.keras.metrics.Accuracy()
-    m.update_state(
-                    y_true=y,
-                    y_pred=y_pred)
-    accuracy = m.result()
-    return tf.math.reduce_mean(accuracy)
+    y_pred = tf.math.argmax(y_pred, axis=1)
+    y = tf.math.argmax(y, axis=1)
+    acc = tf.reduce_mean(tf.cast(tf.math.equal(y_pred, y), "float"))
+    return acc
