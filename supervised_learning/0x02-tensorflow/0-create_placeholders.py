@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""This module defines a function that
+creates placeholders. """
 
 import tensorflow.compat.v1 as tf
 
