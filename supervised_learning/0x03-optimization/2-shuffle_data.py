@@ -7,6 +7,6 @@ import numpy as np
 
 def shuffle_data(X, Y):
     """Returns both shuffled matrices. """
-    X = np.random.permutation(X)
-    Y = np.random.permutation(Y)
-    return (X, Y)
+    m = X.shape[0]
+    pattern = np.random.permutation(m)
+    return (X[pattern], Y[pattern])
