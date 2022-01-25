@@ -13,16 +13,14 @@ def build_model(nx, layers, activations, lambtha, keep_prob):
     keep_prob is the probability of a node being kept for dropout."""
 
     reg = K.regularizers.l2(lambtha)
-    layer_list = []
     inp = K.Input(shape=(nx,))
     x = inp
 
     for i in range(len(layers)):
-        if i == 0:
-            x = K.layers.Dense(layers[i],
-                               activation=activations[i],
-                               kernel_regularizer=reg)(x)
-            continue
-        x = K.layers.Dropout(1 - keep_prob)(x)
+        if i != 0:
+            x = K.layers.Dropout(1 - keep_prob)(x)
+        x = K.layers.Dense(layers[i],
+                           activation=activations[i],
+                           kernel_regularizer=reg)(x)
 
     return K.Model(inputs=inp, outputs=x)
