@@ -23,7 +23,7 @@ def build_model(nx, layers, activations, lambtha, keep_prob):
                                              input_shape=(nx,)))
             continue
 
-        layer_list.append(K.layers.Dropout(keep_prob))
+        layer_list.append(K.layers.Dropout(1 - keep_prob))
         layer_list.append(K.layers.Dense(layers[i], activation=activations[i],
                                          kernel_regularizer=reg))
     return K.Sequential(layer_list)
