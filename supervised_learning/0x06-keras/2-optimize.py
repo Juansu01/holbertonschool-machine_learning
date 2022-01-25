@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """This module defines a function that adds the Adam
     optimizer to a model."""
 
