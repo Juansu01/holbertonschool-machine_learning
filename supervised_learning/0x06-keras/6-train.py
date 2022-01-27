@@ -13,12 +13,13 @@ def train_model(network, data, labels, batch_size,
     epochs, verbose, shuffle to train the model using
     mini-batch gradient descent. """
 
-    my_callbacks = None
     if early_stopping and validation_data:
         my_callbacks = []
         my_callbacks.append(
             K.callbacks.EarlyStopping(
                 monitor='loss', patience=patience))
+    else:
+        my_callbacks = None
 
     return network.fit(x=data, y=labels,
                        batch_size=batch_size,
