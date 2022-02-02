@@ -49,7 +49,7 @@ def lenet5(X):
 
     softmax = K.layers.Softmax()(out7)
     model = K.Model(X, softmax)
-    model.compile(optimizer="adam",
+    model.compile(optimizer=K.optimizers.Adam(),
                   loss="categorical_crossentropy",
                   metrics=["accuracy"])
 
