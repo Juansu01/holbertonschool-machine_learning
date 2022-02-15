@@ -9,7 +9,6 @@ main - trains a model to classify the CIFAR 10 dataset.
 import tensorflow.keras as K
 
 
-
 def preprocess_data(X, Y):
     """
     X - is the input data.
@@ -17,7 +16,11 @@ def preprocess_data(X, Y):
     Preprocesses data for the model.
     Returns X_p and Y_p respectively.
     """
-    pass
+    preprocess = K.applications.mobilenet.preprocess_input
+    X_p = preprocess(X, data_format="channels_last")
+    Y_p = K.utils.to_categorical(Y, 10)
+
+    return X_p, Y_p
 
 
 def main():
